@@ -174,3 +174,5 @@ if (&term == 'xterm' || &term =~? '^screen')
     endif
 endif
 
+
+nnoremap <leader>w <C-w>v<C-w>l
