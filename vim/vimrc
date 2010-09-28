@@ -176,3 +176,13 @@ endif
 
 
 nnoremap <leader>w <C-w>v<C-w>l
+
+set guifont=Inconsolata:h14
+set antialias
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+
+set fuopt=maxvert,maxhorz
+
