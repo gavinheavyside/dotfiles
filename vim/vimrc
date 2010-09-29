@@ -64,14 +64,16 @@ set listchars=tab:.\ ,eol:¬
 
 " Color scheme (terminal)
 syntax on
-colorscheme desert 
+colorscheme desert
 
 "  Use Pathogen to load bundles
 call pathogen#runtime_append_all_bundles()
 
 " NERD Tree
-map <F2> :NERDTreeToggle<cr>
+" map <F2> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
+
+set pastetoggle=<F2>
 
 " Use the damn hjkl keys
 "nnoremap <up> <nop>
@@ -96,6 +98,8 @@ set foldlevelstart=0
 nnoremap <Space> za
 vnoremap <Space> za
 au BufNewFile,BufRead *.html map <leader>ft Vatzf
+
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 function! MyFoldText()
   let line = getline(v:foldstart)
@@ -132,7 +136,7 @@ au BufNewFile,BufRead *.m*down nnoremap <leader>3 I### <ESC>
 map <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Ack
-map <leader>a :Ack 
+map <leader>a :Ack
 
 " Yankring
 nnoremap <silent> <F3> :YRShow<cr>
