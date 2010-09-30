@@ -188,5 +188,6 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 
-set fuopt=maxvert,maxhorz
-
+if has("macunix")
+  set fuopt=maxvert,maxhorz
+endif
