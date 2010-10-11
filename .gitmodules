@@ -1,0 +1,3 @@
+[submodule "vim/bundle/vim-cucumber"]
+	path = vim/bundle/vim-cucumber
+	url = http://github.com/tpope/vim-cucumber.git
