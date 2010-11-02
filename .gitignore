@@ -1,3 +1,5 @@
 vim/tmp/*
+vim/doc/*
+vim/.VimballRecord
 .netrwhist
 leiningen/clojars

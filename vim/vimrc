@@ -39,6 +39,7 @@ set backup                        " enable backups
 
 " Leader
 let mapleader = ","
+let maplocalleader = "."
 
 " Searching
 nnoremap / /\v
@@ -192,3 +193,4 @@ set guioptions-=R
 if has("macunix")
   set fuopt=maxvert,maxhorz
 endif
+
