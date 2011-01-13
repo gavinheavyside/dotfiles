@@ -183,14 +183,17 @@ endif
 
 nnoremap <leader>w <C-w>v<C-w>l
 
-set guifont=Inconsolata:h14
+if has("macunix")
+  set fuopt=maxvert,maxhorz
+  set guifont=Inconsolata\ 14
+else
+  set guifont=Inconsolata\ 12
+endif
+
 set antialias
 set guioptions-=l
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 
-if has("macunix")
-  set fuopt=maxvert,maxhorz
-endif
 
