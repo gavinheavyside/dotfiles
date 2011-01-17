@@ -62,7 +62,11 @@ set formatoptions=qrn1
 set colorcolumn=85
 
 set list
-set listchars=tab:.\ ,eol:¬
+if has('gui_running')
+  set listchars=tab:.\ ,eol:Â¶
+else
+  set listchars=tab:.\ ,eol:$
+endif
 
 " Color scheme (terminal)
 syntax on
