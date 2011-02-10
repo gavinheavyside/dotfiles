@@ -189,7 +189,7 @@ nnoremap <leader>w <C-w>v<C-w>l
 
 if has("macunix")
   set fuopt=maxvert,maxhorz
-  set guifont=Inconsolata\ 14
+  set guifont=Inconsolata:h14
 else
   set guifont=Inconsolata\ 12
 endif
