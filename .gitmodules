@@ -4,3 +4,9 @@
 [submodule "vim/bundle/vim-haml"]
 	path = vim/bundle/vim-haml
 	url = http://github.com/tpope/vim-haml.git
+[submodule "vim/bundle/vim-ruby-refactoring"]
+	path = vim/bundle/vim-ruby-refactoring
+	url = https://github.com/ecomba/vim-ruby-refactoring
+[submodule "vim/bundle/vim-coffee-script"]
+	path = vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git

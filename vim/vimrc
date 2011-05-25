@@ -190,6 +190,8 @@ nnoremap <leader>w <C-w>v<C-w>l
 if has("macunix")
   set fuopt=maxvert,maxhorz
   set guifont=Inconsolata:h14
+  "  let vimclojure#WantNailgun = 1 
+  "  let vimclojure#NailgunClient = "/Users/gavin/.vim/bundle/vimclojure-2.2.0/lib/nailgun/ng"
 else
   set guifont=Inconsolata\ 12
 endif
