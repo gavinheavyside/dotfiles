@@ -70,7 +70,8 @@ endif
 
 " Color scheme (terminal)
 syntax on
-colorscheme desert
+set background=dark
+colorscheme solarized
 
 "  Use Pathogen to load bundles
 call pathogen#runtime_append_all_bundles()
