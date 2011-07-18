@@ -3,3 +3,4 @@ vim/doc/*
 vim/.VimballRecord
 .netrwhist
 leiningen/clojars
+leiningen/self-installs
