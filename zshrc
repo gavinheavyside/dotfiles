@@ -26,5 +26,6 @@ plugins=(git rvm ruby brew bundler gem osx rails3 vagrant vi-mode knife)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+export PATH=/usr/local/bin:$PATH
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
