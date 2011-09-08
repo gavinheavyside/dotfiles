@@ -13,6 +13,9 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
+" mouse in terminal
+set mouse=a
+
 " Basic options
 set encoding=utf-8
 set scrolloff=3
@@ -59,7 +62,7 @@ vmap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=80
 
 set list
 if has('gui_running')
@@ -99,12 +102,11 @@ set pastetoggle=<F2>
 "map <C-l> <C-w>l
 "map <leader>w <C-w>v<C-w>l
 
-
 " Folding
-set foldlevelstart=0
-nnoremap <Space> za
-vnoremap <Space> za
-au BufNewFile,BufRead *.html map <leader>ft Vatzf
+"set foldlevelstart=0
+"nnoremap <Space> za
+"vnoremap <Space> za
+"au BufNewFile,BufRead *.html map <leader>ft Vatzf
 
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
@@ -145,15 +147,10 @@ map <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " Ack
 map <leader>a :Ack
 
-" Yankring
-nnoremap <silent> <F3> :YRShow<cr>
-nnoremap <silent> <leader>y :YRShow<cr>
-
 " Formatting, TextMate-style
 map <leader>q gqip
 
 nmap <leader>m :make<cr>
-
 
 " Easier linewise reselection
 map <leader>v V`]
@@ -167,9 +164,6 @@ nmap <leader>R :RainbowParenthesesToggle<CR>
 
 " Shouldn't need shift
 nnoremap ; :
-
-" Save when losing focus
-au FocusLost * :wa
 
 if (&term == 'xterm' || &term =~? '^screen')
     "256 color --
@@ -187,10 +181,14 @@ endif
 
 
 nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>e <C-w>s<C-w>j
 
 nnoremap <leader><leader> <C-^>
 
 if has("macunix")
+  " Save when losing focus
+  au FocusLost * :wa
+
   set fuopt=maxvert,maxhorz
 "  set guifont=DejaVu\ Sans\ Mono:h14
   set guifont=Inconsolata:h14
@@ -205,5 +203,3 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
-
-

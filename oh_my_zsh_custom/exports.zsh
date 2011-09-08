@@ -1,3 +1,4 @@
+export EDITOR=vim
 export PATH=$PATH:$HOME/bin
 
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
@@ -9,3 +10,4 @@ export OPSCODE_USER=hgavin
 export ORGNAME=mydrive
 
 [[ -s $HOME/.ec2/mydrive/access_keys ]] && source $HOME/.ec2/mydrive/access_keys
+[[ -s $HOME/.api_keys ]] && source $HOME/.api_keys

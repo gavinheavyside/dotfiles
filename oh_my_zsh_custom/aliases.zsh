@@ -20,9 +20,8 @@ alias s="tmux -2 attach -d"
 alias start_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias stop_postgres="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
-alias vi="mvim"
-alias vim="mvim"
-
 alias top=htop
 
 alias lazytest="java -cp \"src:test:classes:lib/*:lib/dev/*\" lazytest.watch src test"
+
+alias knife="nocorrect knife"
