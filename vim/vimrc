@@ -80,7 +80,7 @@ colorscheme solarized
 call pathogen#runtime_append_all_bundles()
 
 " NERD Tree
-" map <F2> :NERDTreeToggle<cr>
+map <F2> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
 
 set pastetoggle=<F2>
@@ -203,3 +203,8 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*

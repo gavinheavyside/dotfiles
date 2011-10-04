@@ -1,5 +1,6 @@
 export EDITOR=vim
-export PATH=$PATH:$HOME/bin
+export TEX_PATH=/usr/local/texlive/2011/bin
+export PATH=$PATH:$TEX_PATH:$HOME/bin
 
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
 export EC2_HOME=`brew --prefix ec2-api-tools`/jars
