@@ -12,9 +12,6 @@ alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
 
 alias ldd="otool -L"
 
-alias spec="spec --color"
-alias rspec="rspec --color"
-
 alias s="tmux -2 attach -d"
 
 alias start_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
