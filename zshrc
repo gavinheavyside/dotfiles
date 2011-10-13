@@ -26,7 +26,7 @@ plugins=(brew bundler gem git knife node npm osx rails3 ruby vagrant vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 #[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 eval "$(rbenv init -)"
