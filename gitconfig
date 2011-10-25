@@ -1,0 +1,11 @@
+[user]
+	name = Gavin Heavyside
+	email = gavin.heavyside@mydrivesolutions.com
+[color]
+	ui = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[branch]
+	autosetuprebase = always
