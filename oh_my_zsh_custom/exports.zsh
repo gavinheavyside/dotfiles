@@ -2,7 +2,8 @@ export EDITOR=vim
 export TEX_PATH=/usr/local/texlive/2011/bin
 export PATH=$PATH:$TEX_PATH:$HOME/bin
 
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
+export JAVA_HOME=`/usr/libexec/java_home`
+export JRUBY_OPTS=--1.9
 export EC2_HOME=`brew --prefix ec2-api-tools`/jars
 
 export JAVA_OPTS=-Xmx768m
