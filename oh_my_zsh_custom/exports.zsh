@@ -11,5 +11,7 @@ export JAVA_OPTS=-Xmx768m
 export OPSCODE_USER=hgavin
 export ORGNAME=mydrive
 
+export MAKEFLAGS="-j 4"
+
 [[ -s $HOME/.ec2/mydrive/access_keys ]] && source $HOME/.ec2/mydrive/access_keys
 [[ -s $HOME/.api_keys ]] && source $HOME/.api_keys
