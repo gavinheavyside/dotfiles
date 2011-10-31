@@ -9,3 +9,5 @@
 	status = auto
 [branch]
 	autosetuprebase = always
+[github]
+	user = hgavin

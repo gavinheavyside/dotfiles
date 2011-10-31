@@ -28,3 +28,6 @@
 [submodule "vim/bundle/octave.vim--"]
 	path = vim/bundle/octave.vim--
 	url = git://github.com/vim-scripts/octave.vim--.git
+[submodule "vim/bundle/easytags.vim"]
+	path = vim/bundle/easytags.vim
+	url = https://github.com/vim-scripts/easytags.vim.git
