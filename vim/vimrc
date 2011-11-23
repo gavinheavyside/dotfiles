@@ -65,11 +65,8 @@ set formatoptions=qrn1
 set colorcolumn=80
 
 set list
-if has('gui_running')
-  set listchars=tab:.\ ,eol:¬
-else
-  set listchars=tab:.\ ,eol:$
-endif
+set listchars=tab:.\ ,eol:¬
+"set listchars=tab:.\ ,eol:$
 
 " Color scheme (terminal)
 syntax on
@@ -142,7 +139,7 @@ au BufNewFile,BufRead *.m*down nnoremap <leader>2 yypVr-
 au BufNewFile,BufRead *.m*down nnoremap <leader>3 I### <ESC>
 
 " Clean whitespace
-map <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " Ack
 map <leader>a :Ack
