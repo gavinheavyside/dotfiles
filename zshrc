@@ -21,7 +21,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler gem git history-substring-search knife lein node npm osx rails3 ruby vagrant vi-mode)
+plugins=(brew bundler gem git history-substring-search knife lein node npm nyan osx rake rbenv ruby vagrant vi-mode)
 
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
@@ -29,6 +29,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-#[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-eval "$(rbenv init -)"
