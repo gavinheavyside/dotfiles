@@ -7,7 +7,7 @@ alias harrier="ssh -t office.mydrivesolutions.com ssh harrier"
 alias citation="ssh -Y 192.168.0.100"
 alias typhoon="ssh -Y 192.168.0.104"
 
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
 
 alias ldd="otool -L"
