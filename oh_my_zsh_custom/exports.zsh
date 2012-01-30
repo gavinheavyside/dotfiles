@@ -1,6 +1,4 @@
 export EDITOR=vim
-export TEX_PATH=/usr/local/texlive/2011/bin
-export PATH=$PATH:$TEX_PATH:$HOME/bin
 
 export JAVA_HOME=`/usr/libexec/java_home`
 export JRUBY_OPTS=--1.9
@@ -13,6 +11,8 @@ export ORGNAME=mydrive
 
 export MAKEFLAGS="-j 6"
 export REPORTTIME=5
+
+export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 
 [[ -s $HOME/.ec2/mydrive/access_keys ]] && source $HOME/.ec2/mydrive/access_keys
 [[ -s $HOME/.api_keys ]] && source $HOME/.api_keys
