@@ -31,3 +31,6 @@
 [submodule "vim/bundle/easytags.vim"]
 	path = vim/bundle/easytags.vim
 	url = https://github.com/vim-scripts/easytags.vim.git
+[submodule "vim/bundle/slimv"]
+	path = vim/bundle/slimv
+	url = https://github.com/vim-scripts/slimv.vim.git
