@@ -4,6 +4,9 @@ filetype plugin indent on
 
 set nocompatible
 
+
+set clipboard=unnamed
+
 " Security
 set modelines=0
 
