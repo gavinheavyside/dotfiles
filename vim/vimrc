@@ -254,6 +254,30 @@ endfunction
 :map <leader>p :PromoteToLet<cr>
 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CTRL P
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_extensions = ["tag"]
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_map = '<leader>f'
+let g:ctrlp_max_height = 100
+
+map <leader>gv :CtrlP app/views<cr>
+map <leader>gc :CtrlP app/controllers<cr>
+map <leader>gm :CtrlP app/models<cr>
+map <leader>gh :CtrlP app/helpers<cr>
+map <leader>gl :CtrlP lib<cr>
+map <leader>gp :CtrlP public<cr>
+map <leader>gs :CtrlP public/stylesheets/sass<cr>
+map <leader>gf :CtrlP features<cr>
+map <leader>gt :CtrlPTag<cr>
+map <leader>f :CtrlP<cr>
+map <leader>F :CtrlP %%<cr>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Test Running
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! SetRspec1()
   let t:st_rspec_command="spec"
 endfunction
@@ -347,4 +371,6 @@ endfunction
 map <leader>c :call RunCucumberFile()<cr>
 " Run only the example under the cursor
 map <leader>C :call RunNearestCucumber()<cr>
+
+
 
