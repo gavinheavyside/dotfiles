@@ -16,3 +16,11 @@ export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 
 [[ -s $HOME/.ec2/mydrive/access_keys ]] && source $HOME/.ec2/mydrive/access_keys
 [[ -s $HOME/.api_keys ]] && source $HOME/.api_keys
+
+export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_HEAP_SLOTS_INCREMENT=1000000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=1000000000
+export RUBY_HEAP_FREE_MIN=500000
+
+export FC=gfortran-4.2
