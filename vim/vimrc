@@ -150,7 +150,7 @@ map <leader>a :Ack
 " Formatting, TextMate-style
 map <leader>q gqip
 
-nmap <leader>m :make<cr>
+" nmap <leader>m :make<cr>
 
 " Easier linewise reselection
 map <leader>v V`]
@@ -373,4 +373,5 @@ map <leader>c :call RunCucumberFile()<cr>
 map <leader>C :call RunNearestCucumber()<cr>
 
 
-
+" Open in Marked.app markdown preview
+:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
