@@ -160,7 +160,7 @@ map <leader>v V`]
 inoremap jj <ESC>
 
 " Rainbows!
-nmap <leader>R :RainbowParenthesesToggle<CR>
+let g:vimclojure#ParenRainbow=1
 
 " Shouldn't need shift
 nnoremap ; :
