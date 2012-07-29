@@ -10,7 +10,7 @@
 [branch]
 	autosetuprebase = always
 [github]
-	user = hgavin
+	user = gavinheavyside
 [core]
 	excludesfile = /Users/gavin/.gitignore_global
 [difftool "sourcetree"]
