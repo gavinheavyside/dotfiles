@@ -1,0 +1,7 @@
+#!/bin/bash
+echo -n "$1: "
+case `ifconfig $2 | grep status | awk -F": " '{ print $2 }'` in
+   active) echo `ifconfig $2 | grep "inet" | grep -v 127.0.0.1 | grep -v inet6 | awk '{print $2}'`;;
+   inactive) echo "Disconnected";;
+   *) echo "Unavailable";;
+esac
