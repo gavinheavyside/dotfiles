@@ -21,3 +21,5 @@
 	trustExitCode = true
 [credential]
 	helper = cache
+[alias]
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit --color
