@@ -22,7 +22,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler gem git history-substring-search knife lein node npm nyan osx rake rbenv ruby vagrant vi-mode)
+plugins=(brew bundler gem git github history-substring-search knife lein node npm nyan osx rake rbenv ruby vagrant vi-mode)
 
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
