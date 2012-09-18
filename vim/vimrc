@@ -141,6 +141,8 @@ au BufNewFile,BufRead *.m*down nnoremap <leader>1 yypVr=
 au BufNewFile,BufRead *.m*down nnoremap <leader>2 yypVr-
 au BufNewFile,BufRead *.m*down nnoremap <leader>3 I### <ESC>
 
+au BufRead,BufNewFile *.go set filetype=go
+
 " Clean whitespace
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
