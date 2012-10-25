@@ -164,9 +164,6 @@ inoremap jj <ESC>
 " Rainbows!
 let g:vimclojure#ParenRainbow=1
 
-" Shouldn't need shift
-nnoremap ; :
-
 if (&term == 'xterm' || &term =~? '^screen')
     "256 color --
     let &t_Co=256
