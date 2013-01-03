@@ -31,9 +31,6 @@
 [submodule "vim/bundle/slimv"]
 	path = vim/bundle/slimv
 	url = https://github.com/vim-scripts/slimv.vim.git
-[submodule "vim/bundle/ctrlp"]
-	path = vim/bundle/ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
@@ -49,9 +46,6 @@
 [submodule "vim/bundle/JSON.vim"]
 	path = vim/bundle/JSON.vim
 	url = git://github.com/vim-scripts/JSON.vim.git
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/bufkill.vim"]
 	path = vim/bundle/bufkill.vim
 	url = git://github.com/vim-scripts/bufkill.vim.git
