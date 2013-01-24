@@ -23,6 +23,4 @@ alias lazytest="java -cp \"src:test:classes:lib/*:lib/dev/*\" lazytest.watch src
 
 alias knife="nocorrect knife"
 
-alias octave=/Applications/Octave.app/Contents/Resources/bin/octave
-
 alias irb=pry
