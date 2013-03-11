@@ -24,6 +24,8 @@ export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 export RUBY_FREE_MIN=500000
 
-export FC=gfortran-4.2
+export FC=`brew --prefix gfortran`/bin/gfortran
 
 export PATH=$PATH:/opt/aws/AWS-ElasticBeanstalk-CLI-2.2/eb/macosx/python2.7
+
+export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
