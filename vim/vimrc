@@ -55,7 +55,6 @@ set smartcase
 set incsearch
 set showmatch
 set hlsearch
-set gdefault
 map <leader><space> :let @/=''<cr>
 runtime macros/matchit.vim
 nmap <tab> %
