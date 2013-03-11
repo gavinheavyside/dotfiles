@@ -1,69 +1,30 @@
-[submodule "vim/bundle/vim-cucumber"]
-	path = vim/bundle/vim-cucumber
-	url = http://github.com/tpope/vim-cucumber.git
-[submodule "vim/bundle/vim-haml"]
-	path = vim/bundle/vim-haml
-	url = http://github.com/tpope/vim-haml.git
-[submodule "vim/bundle/vim-ruby-refactoring"]
-	path = vim/bundle/vim-ruby-refactoring
-	url = https://github.com/ecomba/vim-ruby-refactoring
-[submodule "vim/bundle/vim-coffee-script"]
-	path = vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "vim/bundle/vim-colors-solarized"]
-	path = vim/bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "vim/bundle/json.vim"]
-	path = vim/bundle/json.vim
-	url = https://github.com/vim-scripts/JSON.vim.git
-[submodule "vim/bundle/vim-latex"]
-	path = vim/bundle/vim-latex
-	url = https://github.com/jcf/vim-latex
-[submodule "vim/bundle/screen"]
-	path = vim/bundle/screen
-	url = https://github.com/ervandew/screen
-[submodule "vim/bundle/octave.vim--"]
-	path = vim/bundle/octave.vim--
-	url = git://github.com/vim-scripts/octave.vim--.git
-[submodule "vim/bundle/easytags.vim"]
-	path = vim/bundle/easytags.vim
-	url = https://github.com/vim-scripts/easytags.vim.git
-[submodule "vim/bundle/slimv"]
-	path = vim/bundle/slimv
-	url = https://github.com/vim-scripts/slimv.vim.git
-[submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
-	url = git://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/vim-rails"]
-	path = vim/bundle/vim-rails
-	url = git://github.com/tpope/vim-rails.git
-[submodule "vim/bundle/matchit"]
-	path = vim/bundle/matchit
-	url = git://github.com/vim-scripts/matchit.zip.git
-[submodule "vim/bundle/vim-r-plugin"]
-	path = vim/bundle/vim-r-plugin
-	url = git://github.com/jcfaria/Vim-R-plugin.git
 [submodule "vim/bundle/JSON.vim"]
 	path = vim/bundle/JSON.vim
 	url = git://github.com/vim-scripts/JSON.vim.git
 [submodule "vim/bundle/bufkill.vim"]
 	path = vim/bundle/bufkill.vim
 	url = git://github.com/vim-scripts/bufkill.vim.git
-[submodule "vim/bundle/vim-endwise"]
-	path = vim/bundle/vim-endwise
-	url = git://github.com/tpope/vim-endwise.git
-[submodule "vim/bundle/vim-protobuf"]
-	path = vim/bundle/vim-protobuf
-	url = git@github.com:gavinheavyside/vim-protobuf.git
-[submodule "vim/bundle/vim-markdown"]
-	path = vim/bundle/vim-markdown
-	url = git://github.com/tpope/vim-markdown.git
+[submodule "vim/bundle/easytags.vim"]
+	path = vim/bundle/easytags.vim
+	url = https://github.com/vim-scripts/easytags.vim.git
 [submodule "vim/bundle/vim-asciidoc"]
 	path = vim/bundle/vim-asciidoc
 	url = git@github.com:gavinheavyside/vim-asciidoc.git
-[submodule "vim/bundle/mustache.vim"]
-	path = vim/bundle/mustache.vim
-	url = https://github.com/juvenn/mustache.vim
-[submodule "vim/bundle/vimclojure"]
-	path = vim/bundle/vimclojure
-	url = https://github.com/gaverhae/vimclojure
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/vim-cucumber"]
+	path = vim/bundle/vim-cucumber
+	url = http://github.com/tpope/vim-cucumber.git
+[submodule "vim/bundle/vim-endwise"]
+	path = vim/bundle/vim-endwise
+	url = git://github.com/tpope/vim-endwise.git
+[submodule "vim/bundle/vim-haml"]
+	path = vim/bundle/vim-haml
+	url = http://github.com/tpope/vim-haml.git
+[submodule "vim/bundle/vim-markdown"]
+	path = vim/bundle/vim-markdown
+	url = git://github.com/tpope/vim-markdown.git
+[submodule "vim/bundle/vim-rails"]
+	path = vim/bundle/vim-rails
+	url = git://github.com/tpope/vim-rails.git
