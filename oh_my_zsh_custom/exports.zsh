@@ -29,3 +29,5 @@ export FC=`brew --prefix gfortran`/bin/gfortran
 export PATH=$PATH:/opt/aws/AWS-ElasticBeanstalk-CLI-2.2/eb/macosx/python2.7
 
 export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
+
+export LESS='-R -FX'
