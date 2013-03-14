@@ -4,9 +4,6 @@ filetype plugin indent on
 
 set nocompatible
 
-
-set clipboard=unnamed
-
 " Security
 set modelines=0
 
@@ -68,44 +65,13 @@ set colorcolumn=80
 
 set list
 set listchars=tab:.\ ,eol:¬
-"set listchars=tab:.\ ,eol:$
 
 " Color scheme (terminal)
 syntax on
 set background=dark
 colorscheme solarized
 
-"  Use Pathogen to load bundles
-call pathogen#runtime_append_all_bundles()
-
-" NERD Tree
-map <F2> :NERDTreeToggle<cr>
-let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
-
 set pastetoggle=<F2>
-
-" Use the damn hjkl keys
-"nnoremap <up> <nop>
-"nnoremap <down> <nop>
-"nnoremap <left> <nop>
-"nnoremap <right> <nop>
-"
-" And make them fucking work, too.
-"nnoremap j gj
-"nnoremap k gk
-"
-" Easy buffer navigation
-"map <C-h> <C-w>h
-"map <C-j> <C-w>j
-"map <C-k> <C-w>k
-"map <C-l> <C-w>l
-"map <leader>w <C-w>v<C-w>l
-
-" Folding
-"set foldlevelstart=0
-"nnoremap <Space> za
-"vnoremap <Space> za
-"au BufNewFile,BufRead *.html map <leader>ft Vatzf
 
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
@@ -160,9 +126,6 @@ map <leader>v V`]
 " inoremap <Esc> <nop>
 inoremap jj <ESC>
 
-" Rainbows!
-let g:vimclojure#ParenRainbow=1
-
 if (&term == 'xterm' || &term =~? '^screen')
     "256 color --
     let &t_Co=256
@@ -182,19 +145,6 @@ nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>e <C-w>s<C-w>j
 
 nnoremap <leader><leader> <C-^>
-
-if has("macunix")
-  " Save when losing focus
-  au FocusLost * :wa
-
-  set fuopt=maxvert,maxhorz
-"  set guifont=DejaVu\ Sans\ Mono:h14
-  set guifont=Inconsolata:h14
-  "  let vimclojure#WantNailgun = 1 
-  "  let vimclojure#NailgunClient = "/Users/gavin/.vim/bundle/vimclojure-2.2.0/lib/nailgun/ng"
-else
-  set guifont=Inconsolata\ 12
-endif
 
 set antialias
 set guioptions-=l
@@ -250,27 +200,6 @@ function! PromoteToLet()
 endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>p :PromoteToLet<cr>
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CTRL P
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_extensions = ["tag"]
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_map = '<leader>f'
-let g:ctrlp_max_height = 100
-
-map <leader>gv :CtrlP app/views<cr>
-map <leader>gc :CtrlP app/controllers<cr>
-map <leader>gm :CtrlP app/models<cr>
-map <leader>gh :CtrlP app/helpers<cr>
-map <leader>gl :CtrlP lib<cr>
-map <leader>gp :CtrlP public<cr>
-map <leader>gs :CtrlP public/stylesheets/sass<cr>
-map <leader>gf :CtrlP features<cr>
-map <leader>gt :CtrlPTag<cr>
-map <leader>f :CtrlP<cr>
-map <leader>F :CtrlP %%<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -370,6 +299,3 @@ map <leader>c :call RunCucumberFile()<cr>
 " Run only the example under the cursor
 map <leader>C :call RunNearestCucumber()<cr>
 
-
-" Open in Marked.app markdown preview
-:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
