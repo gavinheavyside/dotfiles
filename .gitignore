@@ -1,6 +1,7 @@
 vim/tmp/*
 vim/doc/*
 vim/.VimballRecord
+vim/tags
 .netrwhist
 leiningen/clojars
 leiningen/self-installs
