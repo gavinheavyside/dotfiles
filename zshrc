@@ -28,6 +28,8 @@ TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
 source $ZSH/oh-my-zsh.sh
 
+unsetopt correct
+
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
 
