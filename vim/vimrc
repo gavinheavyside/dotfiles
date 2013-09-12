@@ -12,6 +12,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'gavinheavyside/vim-asciidoc'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'gavinheavyside/vim-ruby-test'
+Bundle 'tpope/vim-markdown'
 
 filetype plugin indent on
 
@@ -43,6 +44,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
+set lazyredraw
 set undofile
 set undodir=/tmp
 
@@ -172,3 +174,12 @@ endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>p :PromoteToLet<cr>
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" K as 'split'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap K i<CR><Esc>
+
+let g:vim_markdown_folding_disabled=1
+
+nnoremap § @a

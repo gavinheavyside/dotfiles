@@ -31,3 +31,7 @@ export PATH=$PATH:/opt/aws/AWS-ElasticBeanstalk-CLI-2.2/eb/macosx/python2.7
 export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
 
 export LESS='-R -FX'
+
+export PIP_REQUIRE_VIRTUALENV=true
+# cache pip-installed packages to avoid re-downloading
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
