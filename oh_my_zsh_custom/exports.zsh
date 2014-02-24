@@ -17,12 +17,14 @@ export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 [[ -s $HOME/.ec2/mydrive/access_keys ]] && source $HOME/.ec2/mydrive/access_keys
 [[ -s $HOME/.api_keys ]] && source $HOME/.api_keys
 
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_HEAP_FREE_MIN=500000
-export RUBY_FREE_MIN=500000
+# /usr/local/opt/rbenv/versions/2.1.0/bin/ruby: warning: RUBY_FREE_MIN is obsolete. Use RUBY_GC_HEAP_FREE_SLOTS instead.
+# /usr/local/opt/rbenv/versions/2.1.0/bin/ruby: warning: RUBY_HEAP_MIN_SLOTS is obsolete. Use RUBY_GC_HEAP_INIT_SLOTS instead.
+#export RUBY_HEAP_MIN_SLOTS=1000000
+#export RUBY_HEAP_SLOTS_INCREMENT=1000000
+#export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+#export RUBY_GC_MALLOC_LIMIT=1000000000
+#export RUBY_HEAP_FREE_MIN=500000
+#export RUBY_FREE_MIN=500000
 
 export FC=`brew --prefix gfortran`/bin/gfortran
 

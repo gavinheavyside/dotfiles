@@ -24,3 +24,10 @@ alias lazytest="java -cp \"src:test:classes:lib/*:lib/dev/*\" lazytest.watch src
 alias knife="nocorrect knife"
 
 alias irb=pry
+
+alias nodes-matching="knife node list | grep"
+
+alias hadoop-start='/usr/local/opt/hadoop/sbin/start-dfs.sh && /usr/local/opt/hadoop/sbin/start-yarn.sh'
+alias hadoop-stop='/usr/local/opt/hadoop/sbin/stop-yarn.sh && /usr/local/opt/hadoop/sbin/stop-dfs.sh'
+
+alias zcat=gzcat

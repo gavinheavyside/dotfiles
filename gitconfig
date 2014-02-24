@@ -9,6 +9,7 @@
 	status = auto
 [branch]
 	autosetuprebase = always
+  autosetupmerge = always
 [github]
 	user = gavinheavyside
 [core]
