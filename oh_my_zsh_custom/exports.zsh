@@ -2,7 +2,8 @@ export EDITOR=vim
 
 export JAVA_HOME=`/usr/libexec/java_home`
 export JRUBY_OPTS=--1.9
-export EC2_HOME=`brew --prefix ec2-api-tools`/jars
+export EC2_HOME=`brew --prefix ec2-api-tools`/libexec
+export AWS_ELASTICACHE_HOME=`brew --prefix aws-elasticache`/libexec
 
 export JAVA_OPTS=-Xmx768m
 
@@ -28,12 +29,13 @@ export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 
 export FC=`brew --prefix gfortran`/bin/gfortran
 
-export PATH=$PATH:/opt/aws/AWS-ElasticBeanstalk-CLI-2.2/eb/macosx/python2.7
-
-export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
+export PATH=`brew --prefix hadoop121`/bin:$PATH
+export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
 export LESS='-R -FX'
 
 export PIP_REQUIRE_VIRTUALENV=true
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+export GOPATH=$HOME/src/go

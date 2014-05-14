@@ -16,6 +16,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'uarun/vim-protobuf'
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'fatih/vim-go'
 
 filetype plugin indent on
 
@@ -223,7 +224,14 @@ endfunction
 
 nnoremap <c-g> :call SelectaIdentifier()<cr>
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+au VimEnter *.rb RainbowParenthesesToggle
+au Syntax *.rb RainbowParenthesesLoadRound
+au Syntax *.rb RainbowParenthesesLoadSquare
+au Syntax *.rb RainbowParenthesesLoadBraces
+
+au VimEnter *.clj RainbowParenthesesToggle
+au Syntax *.clj RainbowParenthesesLoadRound
+au Syntax *.clj RainbowParenthesesLoadSquare
+au Syntax *.clj RainbowParenthesesLoadBraces
+
+let g:go_fmt_command = "gofmt -tabs=false -tabwidth=2"
