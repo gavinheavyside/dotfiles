@@ -22,7 +22,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler gem git github history-substring-search knife lein node npm osx rake rbenv ruby vagrant vi-mode)
+plugins=(brew gem git github history-substring-search lein node npm osx ruby vagrant vi-mode)
 
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
@@ -30,8 +30,13 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt correct
 
-# Customize to your needs...
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
+
+export PATH="./bin:/usr/local/heroku/bin:/opt/chefdk/bin:$PATH"
+
+alias hstart="/usr/local/Cellar/hadoop/2.6.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/start-yarn.sh"
+alias hstop="/usr/local/Cellar/hadoop/2.6.0/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/stop-dfs.sh"
