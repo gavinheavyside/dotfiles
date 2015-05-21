@@ -4,19 +4,24 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-rails'
-" Bundle 'Valloric/YouCompleteMe'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-endwise'
-Bundle 'gavinheavyside/vim-asciidoc'
-Bundle 'vim-scripts/bufkill.vim'
-Bundle 'gavinheavyside/vim-ruby-test'
-Bundle 'tpope/vim-markdown'
-Bundle 'uarun/vim-protobuf'
-Bundle 'vim-scripts/paredit.vim'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'fatih/vim-go'
+Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-rails'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-endwise'
+Plugin 'gavinheavyside/vim-asciidoc'
+Plugin 'vim-scripts/bufkill.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-markdown'
+Plugin 'uarun/vim-protobuf'
+Plugin 'vim-scripts/paredit.vim'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-commentary'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'markcornick/vim-terraform'
+" Plugin 'rdnetto/YCM-Generator'
+Plugin 'wting/rust.vim'
 
 filetype plugin indent on
 
@@ -30,7 +35,7 @@ set shiftwidth=2
 set expandtab
 
 " mouse in terminal
-set mouse=a
+" set mouse=a
 
 " Basic options
 set encoding=utf-8
@@ -71,8 +76,8 @@ set showmatch
 set hlsearch
 map <leader><space> :let @/=''<cr>
 runtime macros/matchit.vim
-nmap <tab> %
-vmap <tab> %
+" nmap <tab> %
+" vmap <tab> %
 
 " Soft/hard wrapping
 set wrap
@@ -234,4 +239,14 @@ au Syntax *.clj RainbowParenthesesLoadRound
 au Syntax *.clj RainbowParenthesesLoadSquare
 au Syntax *.clj RainbowParenthesesLoadBraces
 
-let g:go_fmt_command = "gofmt -tabs=false -tabwidth=2"
+let g:go_fmt_command = "goimports"
+
+let g:rspec_command = "!bin/rspec {spec}"
+
+map <Leader>T :call RunCurrentSpecFile()<CR>
+map <Leader>t :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+
+let g:ycm_extra_conf_globlist = ['~/src/*']
