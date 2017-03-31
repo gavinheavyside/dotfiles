@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
-export ZSH_CUSTOM=/Users/gavin/dotfiles/oh_my_zsh_custom
+export ZSH_CUSTOM=/Users/gavin/src/dotfiles/oh_my_zsh_custom
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -30,13 +30,14 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt correct
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
 
-export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 
 export PATH="./bin:/usr/local/heroku/bin:/opt/chefdk/bin:$PATH"
 
-alias hstart="/usr/local/Cellar/hadoop/2.6.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/start-yarn.sh"
-alias hstop="/usr/local/Cellar/hadoop/2.6.0/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/stop-dfs.sh"
+alias gam="/Users/gavin/bin/gam/gam"
+eval $(/usr/libexec/path_helper -s)
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
