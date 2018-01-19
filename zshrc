@@ -31,11 +31,13 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct
 
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
+export PATH=/Users/gavin/Library/Python/2.7/bin:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
 
 export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 
 export PATH="./bin:/usr/local/heroku/bin:/opt/chefdk/bin:$PATH"
+
+alias ag='ag --path-to-ignore ~/.ignore'
 
 alias gam="/Users/gavin/bin/gam/gam"
 eval $(/usr/libexec/path_helper -s)

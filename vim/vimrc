@@ -18,10 +18,13 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-commentary'
 Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'markcornick/vim-terraform'
+Plugin 'hashivim/vim-terraform'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'juliosueiras/vim-terraform-completion'
+" Plugin 'markcornick/vim-terraform'
 " Plugin 'rdnetto/YCM-Generator'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'rust-lang/rust.vim'
+" Plugin 'rust-lang/rust.vim'
 
 " Plugin 'altercation/vim-colors-solarized'
 " Plugin 'queyenth/oxeded.vim'
@@ -101,6 +104,7 @@ set t_Co=256
 set pastetoggle=<F2>
 
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+nnoremap <c-Space> :nohlsearch
 
 " Various syntax stuff
 au BufNewFile,BufRead *.less set filetype=less
@@ -255,3 +259,8 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 
 let g:ycm_extra_conf_globlist = ['~/src/*']
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
