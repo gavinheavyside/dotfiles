@@ -43,3 +43,12 @@ alias gam="/Users/gavin/bin/gam/gam"
 eval $(/usr/libexec/path_helper -s)
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+function assumed_role() {
+  if [[ -v ASSUMED_ROLE ]]
+  then
+    echo "[${ASSUMED_ROLE}] "
+  fi
+}
+
+export PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} %{$fg[yellow]%}$(assumed_role)%{$reset_color%}$(git_prompt_info)'
