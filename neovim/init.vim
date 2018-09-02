@@ -7,6 +7,9 @@ call plug#begin()
 " Aesthetics
 Plug 'ajh17/Spacegray.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
 
 " Functionality
 Plug 'scrooloose/nerdtree'
@@ -101,6 +104,13 @@ map <Leader>a :call RunAllSpecs()<CR>
 let g:NERDTreeDirArrowExpandable = '↠'
 let g:NERDTreeDirArrowCollapsible = '↡'
 nmap <leader>q :NERDTreeToggle<CR>
+
+""" Others
+nmap <leader>g :Goyo<CR>
+nmap <leader>h :RainbowParentheses!!<CR>
+nmap <leader>l :Limelight!!<CR>
+xmap <leader>l :Limelight!!<CR>
+
 
 " Faster Esc
 inoremap jj <ESC>
