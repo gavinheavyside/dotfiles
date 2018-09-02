@@ -19,9 +19,11 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'neomake/neomake'
 
+Plug 'janko-m/vim-test'
+Plug 'tpope/vim-dispatch'
+
 " Languages
 Plug 'tpope/vim-rails'
-Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-endwise'
 
 Plug 'fatih/vim-go'
@@ -94,10 +96,21 @@ let g:deoplete#enable_at_startup = 1
 call deoplete#initialize()
 
 " RSpec.vim mappings
-map <Leader>T :call RunCurrentSpecFile()<CR>
-map <Leader>t :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+" map <Leader>T :call RunCurrentSpecFile()<CR>
+" map <Leader>t :call RunNearestSpec()<CR>
+" map <Leader>l :call RunLastSpec()<CR>
+" map <Leader>a :call RunAllSpecs()<CR>
+nmap <Leader>t :TestNearest<CR>
+nmap <Leader>T :TestFile<CR>
+nmap <Leader>a :TestSuite<CR>
+nmap <Leader>l :TestLast<CR>
+
+" Press this with terminal output to enter normal mode so you can scroll
+" through terminal output
+if has('nvim')
+  tmap <C-o> <C-\><C-n>
+end
+
 
 """ NERDTree
 " let NERDTreeShowHidden=1
