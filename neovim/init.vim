@@ -15,7 +15,15 @@ Plug 'junegunn/limelight.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 
+" Async autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Completion from other opened files
+Plug 'Shougo/context_filetype.vim'
+" Python autocompletion
+Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
+" Just to add the python go-to-definition and similar features, autocompletion
+" from this plugin is disabled
+Plug 'davidhalter/jedi-vim'
 
 Plug 'neomake/neomake'
 
@@ -36,11 +44,18 @@ Plug 'tpope/vim-markdown'
 
 Plug 'ekalinin/Dockerfile.vim'
 
-" Plug 'dart-lang/dart-vim-plugin'
+Plug 'dart-lang/dart-vim-plugin'
+
+Plug 'tomlion/vim-solidity'
+
+" Python
+"
+Plug 'fisadev/vim-isort'
+
 call plug#end()
 
 """ Python3 VirtualEnv
-let g:python3_host_prog = expand('~/.config/nvim/env/bin/python')
+let g:python3_host_prog = expand('/usr/local/bin/python3')
 
 """ Colours
 syntax on
