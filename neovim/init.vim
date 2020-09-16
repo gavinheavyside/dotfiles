@@ -11,24 +11,40 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
 
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'TheAtlasEngine/PastelColors'
+
 " Functionality
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 
 " Async autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Completion from other opened files
-Plug 'Shougo/context_filetype.vim'
+" Plug 'Shougo/context_filetype.vim'
 " Python autocompletion
-Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
+" Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
 " Just to add the python go-to-definition and similar features, autocompletion
 " from this plugin is disabled
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
+
+
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'felippepuhle/coc-graphql', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'neomake/neomake'
 
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-dispatch'
+
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " Languages
 Plug 'tpope/vim-rails'
@@ -39,6 +55,7 @@ Plug 'fatih/vim-go'
 Plug 'hashivim/vim-terraform'
 Plug 'vim-syntastic/syntastic'
 Plug 'juliosueiras/vim-terraform-completion'
+Plug 'jparise/vim-graphql'
 
 Plug 'tpope/vim-markdown'
 
@@ -46,16 +63,21 @@ Plug 'ekalinin/Dockerfile.vim'
 
 Plug 'dart-lang/dart-vim-plugin'
 
-Plug 'tomlion/vim-solidity'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
 
 " Python
 "
 Plug 'fisadev/vim-isort'
 
+" ReasonML / Bucklescript
+Plug 'reasonml-editor/vim-reason-plus'
+" Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+
 call plug#end()
 
 """ Python3 VirtualEnv
-let g:python3_host_prog = expand('/usr/local/bin/python3')
+let g:python3_host_prog = expand('/Users/gavin/.asdf/shims/python')
 
 """ Colours
 syntax on
@@ -104,11 +126,23 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++17 -stdlib=libc++'
+let g:syntastic_cpp_check_header = 1
+
+" let g:LanguageClient_serverCommands = {
+"   \ 'reason': ['/Users/gavin/bin/reason-language-server/reason-language-server.exe'],
+"   \ 'python': ['/Users/gavin/.asdf/shims/pyls'],
+" \ }
+
+" LeaderF
+"let g:Lf_ShortcutF = '<C-f>'
+
 " Deoplete
-let g:deoplete#omni_patterns = {}
-let g:deoplete#omni_patterns.terraform = '[^ *\t"{=$]\w*'
-let g:deoplete#enable_at_startup = 1
-call deoplete#initialize()
+" let g:deoplete#omni_patterns = {}
+" let g:deoplete#omni_patterns.terraform = '[^ *\t"{=$]\w*'
+" let g:deoplete#enable_at_startup = 1
+" call deoplete#initialize()
 
 " RSpec.vim mappings
 " map <Leader>T :call RunCurrentSpecFile()<CR>
@@ -161,3 +195,21 @@ if has("termguicolors")
   set termguicolors
 endif
 
+
+""""
+" coc.nvim "
+""""
+" use tab to trigger completion and pick the selected
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" format the current file with <leader>p
+nmap <leader>p :CocCommand prettier.formatFile<CR>

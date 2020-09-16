@@ -1,28 +1,13 @@
+export EDITOR=vim
+export GOPATH=$HOME/go
+
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=/Users/gavin/src/dotfiles/oh_my_zsh_custom
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 export ZSH_THEME="robbyrussell"
 
-# Set to this to use case-sensitive completion
-# export CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# export DISABLE_AUTO_TITLE="true"
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew gem git github history-substring-search lein node npm osx ruby vagrant vi-mode)
+plugins=(git github history-substring-search vi-mode)
 
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
@@ -30,19 +15,16 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt correct
 
-
-export PATH=/Users/gavin/Library/Python/2.7/bin:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
-
-export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
-
-export PATH="./bin:/usr/local/heroku/bin:/opt/chefdk/bin:$PATH"
+export PATH=./bin:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
 
 alias ag='ag --path-to-ignore ~/.ignore'
 
-alias gam="/Users/gavin/bin/gam/gam"
 eval $(/usr/libexec/path_helper -s)
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
+. ~/.asdf/plugins/java/set-java-home.zsh
 
 function assumed_role() {
   if [[ -v ASSUMED_ROLE ]]
@@ -51,4 +33,26 @@ function assumed_role() {
   fi
 }
 
-export PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} %{$fg[yellow]%}$(assumed_role)%{$reset_color%}$(git_prompt_info)'
+# export PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} %{$fg[yellow]%}$(assumed_role)%{$reset_color%}$(git_prompt_info)'
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/usr/local/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+# <<< conda initialize <<<
+
