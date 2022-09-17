@@ -10,25 +10,16 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
-
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'TheAtlasEngine/PastelColors'
+Plug 'macguirerintoul/night_owl_light.vim'
 
 " Functionality
 " Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 
-" Async autocompletion
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Completion from other opened files
-" Plug 'Shougo/context_filetype.vim'
-" Python autocompletion
-" Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
-" Just to add the python go-to-definition and similar features, autocompletion
-" from this plugin is disabled
-" Plug 'davidhalter/jedi-vim'
-
-
+" COC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
@@ -36,15 +27,14 @@ Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-Plug 'felippepuhle/coc-graphql', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
 
 Plug 'neomake/neomake'
 
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-dispatch'
 
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
 " Languages
 Plug 'tpope/vim-rails'
@@ -53,34 +43,33 @@ Plug 'tpope/vim-endwise'
 Plug 'fatih/vim-go'
 
 Plug 'hashivim/vim-terraform'
-Plug 'vim-syntastic/syntastic'
-Plug 'juliosueiras/vim-terraform-completion'
-Plug 'jparise/vim-graphql'
 
 Plug 'tpope/vim-markdown'
 
 Plug 'ekalinin/Dockerfile.vim'
 
-Plug 'dart-lang/dart-vim-plugin'
-
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 
-" Python
-"
-Plug 'fisadev/vim-isort'
+" Elixir
+Plug 'elixir-editors/vim-elixir'
 
-" ReasonML / Bucklescript
-Plug 'reasonml-editor/vim-reason-plus'
-" Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+" Linting and formatting
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
 """ Python3 VirtualEnv
-let g:python3_host_prog = expand('/Users/gavin/.asdf/shims/python')
+" let g:python3_host_prog = expand('~/.asdf/shims/python')
+
+" ALE formatting and linting
+let g:ale_fixers = {
+\  'elixir': ['mix_format']
+\}
 
 """ Colours
 syntax on
+"colorscheme night_owl_light
 colorscheme spacegray
 
 """ Configuration
@@ -112,23 +101,9 @@ nnoremap <c-Space> :nohlsearch
 " Basic statusline
 set statusline=%<%f\ %h%m%r%y%=
 
-" Syntastic statusline
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 " Finalise statusline
 set statusline+=%-14.(%l,%c%V%)\ %P
 
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++17 -stdlib=libc++'
-let g:syntastic_cpp_check_header = 1
 
 " let g:LanguageClient_serverCommands = {
 "   \ 'reason': ['/Users/gavin/bin/reason-language-server/reason-language-server.exe'],
@@ -201,15 +176,26 @@ endif
 """"
 " use tab to trigger completion and pick the selected
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-function! s:check_back_space() abort
+function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
 " format the current file with <leader>p
 nmap <leader>p :CocCommand prettier.formatFile<CR>
+
+" fzf
+set rtp+=/usr/local/opt/fzf
+
