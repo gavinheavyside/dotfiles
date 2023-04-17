@@ -1,4 +1,4 @@
-export JAVA_OPTS=-Xmx768m
+# export JAVA_OPTS=-Xmx768m
 
 export MAKEFLAGS="-j 6"
 export REPORTTIME=5

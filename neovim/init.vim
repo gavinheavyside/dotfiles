@@ -1,4 +1,4 @@
-" set runtimepath^=~/.vim runtimepath+=~/.vim/after
+":qrn1:qrn1 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 " let &packpath = &runtimepath
 " source ~/.vimrc
 
@@ -17,6 +17,9 @@ Plug 'macguirerintoul/night_owl_light.vim'
 " Functionality
 " Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
+
+" Copilot
+Plug 'github/copilot.vim'
 
 " COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -49,6 +52,7 @@ Plug 'tpope/vim-markdown'
 Plug 'ekalinin/Dockerfile.vim'
 
 Plug 'yuezk/vim-js'
+Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
 " Elixir

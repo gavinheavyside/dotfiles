@@ -11,3 +11,5 @@ alias top=htop
 alias irb=pry
 
 alias zcat=gzcat
+
+alias k=kubectl
