@@ -3,12 +3,12 @@ export GOPATH=$HOME/go
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
-export ZSH_CUSTOM=/Users/gavin/src/dotfiles/oh_my_zsh_custom
+export ZSH_CUSTOM=/Users/gavin/src/gavinheavyside/dotfiles/oh_my_zsh_custom
 export ZSH_THEME="robbyrussell"
 export ZSH_DISABLE_COMPFIX="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git github history-substring-search vi-mode)
+plugins=(git github history-substring-search vi-mode asdf brew)
 
 setopt histignorealldups
 
@@ -18,14 +18,21 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt correct
 
-export PATH=./bin:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
+export PATH=./bin:$PATH:$HOME/bin
 
 alias ag='ag --path-to-ignore ~/.ignore'
 
 eval $(/usr/libexec/path_helper -s)
 
-. /usr/local/opt/asdf/libexec/asdf.sh
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:$(brew --prefix)/share/zsh-completions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 . ~/.asdf/plugins/java/set-java-home.zsh
 
@@ -49,23 +56,4 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
-#        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/usr/local/anaconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-# <<< conda initialize <<<
-
-
-# Created by `pipx` on 2022-04-13 18:23:38
-export PATH="$PATH:/Users/gavin/.local/bin"
 

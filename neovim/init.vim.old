@@ -5,7 +5,7 @@
 call plug#begin()
 
 " Aesthetics
-Plug 'ajh17/Spacegray.vim'
+Plug 'gavinok/spaceway.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -13,13 +13,15 @@ Plug 'junegunn/limelight.vim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'TheAtlasEngine/PastelColors'
 Plug 'macguirerintoul/night_owl_light.vim'
+Plug 'stevedylandev/flexoki-nvim'
 
 " Functionality
 " Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 
 " Copilot
-Plug 'github/copilot.vim'
+"Plug 'github/copilot.vim'
+Plug 'supermaven-inc/supermaven-nvim'
 
 " COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -74,7 +76,8 @@ let g:ale_fixers = {
 """ Colours
 syntax on
 "colorscheme night_owl_light
-colorscheme spacegray
+"colorscheme spaceway
+colorscheme flexoki
 
 """ Configuration
 filetype plugin indent on

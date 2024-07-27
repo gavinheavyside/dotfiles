@@ -7,3 +7,4 @@ leiningen/clojars
 leiningen/self-installs
 vim/bundle
 !vim/bundle/vundle
+.DS_Store
